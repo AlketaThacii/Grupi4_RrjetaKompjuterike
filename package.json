@@ -1,0 +1,21 @@
+{
+  "name": "grupi4_rrjetakompjuterike",
+  "version": "1.0.0",
+  "description": "",
+  "main": "clientside.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlketaThacii/Grupi4_RrjetaKompjuterike.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AlketaThacii/Grupi4_RrjetaKompjuterike/issues"
+  },
+  "homepage": "https://github.com/AlketaThacii/Grupi4_RrjetaKompjuterike#readme"
+}
