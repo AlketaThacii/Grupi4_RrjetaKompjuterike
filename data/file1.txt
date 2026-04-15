@@ -1,0 +1,2 @@
+File 1 eshte krijuar për qellime testimi në sistemin UDP server-client. 
+Ai permban te dhena bazike qe klientet mund t’i lexojne dhe eshte ACTIVE per lexim.
