@@ -1,0 +1,2 @@
+File 2 eshte pjese e sistemit UDP server-client dhe perdoret per qellime testimi. 
+Ai permban te dhena sekondare qe mund te lexohen nga klientet. Statusi i tij eshte BACKUP.
