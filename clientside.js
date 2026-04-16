@@ -1,9 +1,2 @@
-let clients = {};
-
-function handleRequest(message, clientId) {
-
-  if(!clients[clientId]) {
-    clients[clientId] = "read";
-  }
-   return "Komande e panjohur!";
-}
+const dgram = require('dgram');
+const client = dgram.createSocket('udp4');
