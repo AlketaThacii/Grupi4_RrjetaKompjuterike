@@ -14,6 +14,8 @@ server.on('message', (msg, rinfo) => {
     console.log(`Mesazh nga ${clientId}: ${message}`);
 
     const response = handleRequest(message, clientId);
+    
+    server.send(response, rinfo.port, rinfo.address);
 });
 
 server.bind(PORT, HOST, () => {
