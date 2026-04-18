@@ -16,10 +16,10 @@ if (message === "help") {
         Komdandat:
         read1
         read2
-        write<tekst>
+        write <tekst>
         execute
         list
-        admin1234
+        admin 1234
         `);
            process.exit();
     }
