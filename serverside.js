@@ -1,5 +1,4 @@
 const dgram = require('dgram');
-const fs = require('fs');
 const { handleRequest } = require('./logic');
 
 const server = dgram.createSocket('udp4');
@@ -17,7 +16,8 @@ server.on('message', (msg, rinfo) => {
     const clientId = rinfo.address + ":" + rinfo.port;
 
     activeClients.add(rinfo.address);
-    console.log(`Klientë aktiv: ${activeClients.size}`);
+    console.log(`Kliente aktiv: ${activeClients.size}`);
+    console.log("IP-t:", [...activeClients].join(", "));
     
     console.log(`Mesazh nga ${clientId}: ${message}`);
 

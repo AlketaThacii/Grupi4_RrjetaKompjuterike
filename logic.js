@@ -17,16 +17,16 @@ function handleRequest(message, clientId) {
 
         if (pass === ADMIN_PASSWORD) {
             clients[clientId] = "admin";
-            return "Je ADMIN";
+            return "Je ADMIN (ke read, write, execute)";
         } else {
             return "Password gabim!";
         }
     }
-  
+  //Njohja e rolit
     else if (message === "whoami") {
         return "Roli yt: " + clients[clientId];
     }
-
+    //Ofrimi i sherbimeve apo opsioni help
     else if (message === "help") {
         return `
 Komandat:
@@ -86,7 +86,7 @@ admin <password> - bëhu admin
             return "Gabim gjatë shkrimit!";
         }
     }
-
+        //Ekzekutimi
      else if (message === "execute") {
         if (clients[clientId] !== "admin") {
             return "S'ke leje për execute!";
@@ -99,7 +99,7 @@ admin <password> - bëhu admin
             return "Gabim gjatë execute!";
         }
     }
-
+    //Default
     return "Komandë e panjohur! Shkruaj 'help'";
 }
 
