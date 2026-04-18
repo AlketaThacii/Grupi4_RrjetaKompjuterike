@@ -1,6 +1,9 @@
 const dgram = require('dgram');
 const fs = require('fs');
+const { handleRequest } = require('./logic');
+
 const server = dgram.createSocket('udp4');
+
 
 const PORT = 5000;
 const HOST = '0.0.0.0';
