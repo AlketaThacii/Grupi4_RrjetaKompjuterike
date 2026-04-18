@@ -12,7 +12,7 @@ if (!message) {
 }
 
 client.send(message, PORT, SERVER_IP, (err) => {
-    if (err) throw err:
+    if (err) throw err;
 });
 
 client.on('message', (msg) => {
