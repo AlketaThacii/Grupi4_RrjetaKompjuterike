@@ -10,3 +10,7 @@ if (!message) {
     console.log("Shkruaj nje komande!");
     process.exit();
 }
+
+client.send(message, PORT, SERVER_IP, (err) => {
+    if (err) throw err:
+});
