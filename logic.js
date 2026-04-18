@@ -66,15 +66,15 @@ admin <password> - bëhu admin
 
         const content = message.replace("write ", "").trim();
 
-        if (content.length === 0) {
-            return "Nuk mund te shkruash tekst bosh!";
+        if (!content) {
+            return "Tekst i zbrazët!";
         }
 
         try {
             fs.appendFileSync("./data/file1.txt", content + "\n", "utf8");
             return "U shtua në file1!";
         } catch (e) {
-            return "Gabim gjate shkrimit!";
+            return "Gabim gjatë shkrimit!";
         }
     }
 
