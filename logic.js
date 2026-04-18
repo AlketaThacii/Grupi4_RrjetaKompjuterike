@@ -61,16 +61,22 @@ function handleRequest(message, clientId) {
         }
     }
 
-    // EXECUTE (vetëm admin)
-    else if (message === "execute") {
+     else if (message === "execute") {
         if (clients[clientId] !== "admin") {
             return "S'ke leje për execute!";
         }
 
-        return "Komanda u ekzekutua!";
+        try {
+            const files = fs.readdirSync("./data");
+            return "Execute OK. Files në server: " + files.join(", ");
+        } catch (e) {
+            return "Gabim gjatë execute!";
+        }
     }
 
-    return "Komande e panjohur!";
+    return "Komandë e panjohur! Shkruaj 'help'";
 }
+
+module.exports = { handleRequest };
 
 module.exports = { handleRequest };
