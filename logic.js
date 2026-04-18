@@ -57,6 +57,15 @@ admin <password> - bëhu admin
             return "Gabim gjatë leximit të file2!";
         }
     }
+    // List Files
+            else if (message === "list") {
+        try {
+            const files = fs.readdirSync("./data");
+            return "Files në server:\n" + files.join("\n");
+        } catch (e) {
+            return "Gabim gjatë leximit të folderit!";
+        }
+    }
 
     // WRITE (vetëm admin)
     else if (message.startsWith("write ")) {
