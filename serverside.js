@@ -1,6 +1,9 @@
 const dgram = require('dgram');
 const fs = require('fs');
+const { handleRequest } = require('./logic');
+
 const server = dgram.createSocket('udp4');
+
 
 const PORT = 5000;
 const HOST = '0.0.0.0';
@@ -19,5 +22,5 @@ server.on('message', (msg, rinfo) => {
 });
 
 server.bind(PORT, HOST, () => {
-    console.log("Serveri eshte aktiv...");
+    console.log(`Serveri është aktiv në ${HOST}:${PORT}`);
 });
