@@ -19,5 +19,5 @@ server.on('message', (msg, rinfo) => {
 });
 
 server.bind(PORT, HOST, () => {
-    console.log("Serveri eshte aktiv...");
+    console.log(`Serveri është aktiv në ${HOST}:${PORT}`);
 });
