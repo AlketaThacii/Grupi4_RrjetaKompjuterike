@@ -9,7 +9,6 @@ function handleRequest(message, clientId) {
     // nëse klienti është i ri
     if (!clients[clientId]) {
         clients[clientId] = "read";
-         return "Je klient i ri (read-only).";
     }
 
     // ADMIN LOGIN me password
