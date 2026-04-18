@@ -22,6 +22,23 @@ function handleRequest(message, clientId) {
             return "Password gabim!";
         }
     }
+  
+    else if (message === "whoami") {
+        return "Roli yt: " + clients[clientId];
+    }
+
+    else if (message === "help") {
+        return `
+Komandat:
+read1 - lexo file1
+read2 - lexo file2
+write <tekst> - shkruaj (vetëm admin)
+execute - ekzekuto (vetëm admin)
+list - shfaq file-t
+whoami - shfaq rolin
+admin <password> - bëhu admin
+`;
+    }
 
     // READ FILE 1
     else if (message === "read1") {
@@ -79,4 +96,3 @@ function handleRequest(message, clientId) {
 
 module.exports = { handleRequest };
 
-module.exports = { handleRequest };
