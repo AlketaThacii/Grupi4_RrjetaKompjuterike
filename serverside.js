@@ -13,7 +13,7 @@ const HOST = '0.0.0.0';
 
 server.on('message', (msg, rinfo) => {
     const message = msg.toString();
-    const clientId = rinfo.address + ":" + rinfo.port;
+    const clientId = rinfo.address;
 
     activeClients.add(rinfo.address);
     console.log(`Kliente aktiv: ${activeClients.size}`);
